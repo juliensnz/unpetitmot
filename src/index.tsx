@@ -21,9 +21,11 @@ const store = createStore(true, firebase)(
     display: displayReducer,
   })
 );
+
 document.addEventListener(
   'keydown',
   event => {
+    console.log(event);
     if (8 === event.keyCode) {
       store.dispatch({type: 'REMOVE_CHAR'});
     } else if (event.keyCode === 90 && event.metaKey) {

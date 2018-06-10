@@ -31,6 +31,10 @@ export default class Display {
     if (Pixel.Off === pixel) {
       return this;
     }
+    if (position.y < 0 || position.x < 0) {
+      return this;
+    }
+
     const pixels = [...this.pixels];
     if (position.y >= pixels.length) {
       return this;

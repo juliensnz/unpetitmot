@@ -14,6 +14,7 @@ export default (
 ) => {
   switch (action.type) {
     case 'UPDATE_CURSOR_POSITION':
+      console.log(action.position);
       state = action.position;
       break;
     default:
